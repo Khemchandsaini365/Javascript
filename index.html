@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e3eaf928a2.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<style>
+    .main {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 80vh;
+    }
+
+    .up {
+        background-color: rgb(27, 118, 255);
+        height: 30%;
+        position: relative;
+        border-radius: 25px 25px 0 0;
+    }
+
+    .down {
+        border-radius: 0 0 25px 25px;
+        background-color: blue;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .img img{
+        object-fit: cover;
+        border-radius: 100%;
+    }
+    .img {
+        position: absolute;
+        top: 70%;
+        left: 30%;
+        width: 125px;
+        height: 125px;
+        border-radius: 100%;
+    }
+
+    .likes {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="up">
+            <div class="img"> 
+                <img src="./IMG_20220919_143916_Bokeh.jpg" width="100%" height="100%" alt="">
+            </div>
+        </div>
+        <div class="down">
+            <h1>Khemchand Saini</h1>
+            <p>MERN Stack Dev.</p>
+            <div class="links">
+                <a href=""><i class="fa-brands fa-facebook"></i> </a>
+                <a href="">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-twitter"></i>
+
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+
+                </a>
+            </div>
+            <div class="btns">
+                <button>Subscribe</button>
+                <button>Message</button>
+            </div>
+            <div class="likes">
+                <div>
+                    <i class="fa-thin fa-heart"></i>
+                    <p>60k</p>
+                </div>
+                <div>
+                    <i class="fa-thin fa-comment"></i>
+                    <p>60k</p>
+                </div>
+                <div>
+                    <i class="fa-thin fa-share"></i>
+                    <p>60k</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

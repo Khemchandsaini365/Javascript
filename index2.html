@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            width: 40%;
+            height: 20vh;
+            border: 2px solid red;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        select {
+            height: 30px;
+            width: 200px;
+        }
+
+        .box {
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            background-color: aqua;
+            border: 2px solid black;
+        }
+
+        #red {
+            background-color: red;
+        }
+
+        #pink {
+            background-color: pink;
+        }
+
+        #blue {
+            background-color: blue;
+        }
+
+        #green {
+            background-color: green;
+        }
+
+        .main {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+            border-radius: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <input type="text" id="inp">
+    <button id="btn">submit</button> -->
+
+
+
+    <div class="main">
+
+        <select name="" id="names">
+            <option value="">none</option>
+            <option value="inder">inder</option>
+            <option value="kk">KK</option>
+            <option value="gk">GK</option>
+        </select>
+
+        <div class="box" id="red"></div>
+        <div class="box" id="pink"></div>
+        <div class="box" id="green"></div>
+        <div class="box" id="blue">
+
+        </div>
+    </div>
+    <h1 id="text" style="display: none;">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus sed vero voluptatem, dolorem quas facere
+        suscipit nobis doloribus quia quae id debitis qui magnam. Labore facilis natus laboriosam, sint culpa
+        reprehenderit optio tempore impedit perspiciatis rem praesentium fugit ullam eveniet, beatae ducimus odio,
+        et similique fuga accusamus! Reiciendis, repudiandae tempora?</h1>
+    <h1 id="para"></h1>
+
+    <button class="btn" id="btn1" value="upper">upper</button>
+    <button class="btn" id="btn2" value="lower">lower</button>
+    <button class="btn" id="btn3" value="+">+</button>
+    <button class="btn" id="btn4" value="-r">-</button>
+    <script>
+
+        document.getElementById("names").onclick = function () {
+            let a = document.getElementById("names").value;
+            // console.log(a);
+            b = document.getElementById("text").innerText;
+            if (a == 'inder') {
+                document.getElementById("para").innerText = "reaxt" + b;
+            } else if (a == 'kk') {
+                document.getElementById("para").innerText = "Angu" + b
+
+            } else if (a == 'gk') {
+                document.getElementById("para").innerText = "jango" + b;
+
+            }
+            else {
+
+                document.getElementById("para").innerText = "";
+            }
+
+            document.getElementById("red").onclick = function () {
+                document.body.style.backgroundColor = "red"
+            }
+            document.getElementById("pink").onclick = function () {
+                document.body.style.backgroundColor = "pink"
+            }
+            document.getElementById("green").onclick = function () {
+                document.body.style.backgroundColor = "green"
+            }
+            document.getElementById("blue").onclick = function () {
+                document.body.style.backgroundColor = "blue"
+            }
+
+
+        }
+        let dfsize = 35;
+        document.getElementById("btn3").onclick=function() {
+            let a = document.getElementById("para").style.fontSize = dfsize + "px";
+            dfsize++;
+        }
+
+        document.getElementById("btn4").onclick=function() {
+            let a = document.getElementById("para").style.fontSize = dfsize + "px";
+            dfsize--;
+        }
+
+        document.getElementById("btn1").onclick=function() {
+            let fsize = document.getElementById("para").style.textTransform="uppercase";
+         }
+
+         document.getElementById("btn2").onclick=function() {
+            let fsize = document.getElementById("para").style.textTransform="lowercase";
+         }
+
+
+
+        // document.getElementById("btn").onclick = function () {
+        //     let a = document.getElementById("inp").value;
+        //     if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z')) {
+        //         console.log("char");
+        //     } else if ((a <= 0) || (a > 0)) {
+        //         console.log("num");
+        //     } else {
+        //         console.log("spac");
+        //     }
+
+        // };
+
+        // var a = 2;
+        // a%2==0?console.log("even"):console.log("odd");;
+        // switch (a) {
+        //     case 1:
+        //         console.log("monday");
+        //         break;
+
+        //     case 2:
+        //         console.log("Tue");
+        //         break;
+
+
+        //     case 3:
+        //         console.log("Wed");
+        //         break;
+
+        //     case 4:
+        //         console.log("Thur");
+        //         break;
+
+        //     case 5:
+        //         console.log("Fri");
+        //         break;
+
+        //     case 6:
+        //         console.log("Sat");
+        //         break;
+
+        //     case 7:
+        //         console.log("Sun");
+        //         break;
+        //     default:
+        //         console.log("not valid");
+        //         break;
+        // }
+
+
+
+    </script>
+</body>
+
+</html>
