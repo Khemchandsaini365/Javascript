@@ -33,7 +33,7 @@
             width: 100px;
             border: 1px solid black;
             border-radius: 5px;
-            box-shadow: 8px 10px 5px  #bdb5b5ba;
+            box-shadow: 8px 10px 5px  #2b2a4cba;
 
         }
         button{
@@ -63,7 +63,7 @@
     <input type="text" class="inp" value="">-->
 
     <div class="container">
-    <input type="text" class="inp" id="inp1" value="" placeholder="color name">
+    <input type="text" class="inp" id="inp1" value="" placeholder="color name" >
     <input type="text" class="inp" id="inp2" value="" placeholder="pick a no for box">
     <button type="submit" class="btn" id="btn"> submit</button>
 
@@ -101,6 +101,46 @@
         //     console.log(i.value);
         //   }
         // }
+       
+
+            
+        //var x = document.querySelectorAll(".inp")[0].value;
+
+        document.querySelectorAll(".innerbox")[0].onclick=function(){
+           let a = document.querySelectorAll(".inp")[0].value;
+            document.querySelectorAll(".innerbox")[0].style.backgroundColor=a;
+
+        }
+        document.querySelectorAll(".innerbox")[1].onclick=function(){
+            let a = document.querySelectorAll(".inp")[0].value;
+            document.querySelectorAll(".innerbox")[1].style.backgroundColor=a;
+        }
+        document.querySelectorAll(".innerbox")[2].onclick=function(){
+            let a = document.querySelectorAll(".inp")[0].value;
+            document.querySelectorAll(".innerbox")[2].style.backgroundColor=a;
+        }
+                document.querySelectorAll(".innerbox")[3].onclick=function(){
+            let a = document.querySelectorAll(".inp")[0].value;
+            document.querySelectorAll(".innerbox")[3].style.backgroundColor=a;
+        }
+        document.querySelectorAll(".innerbox")[4].onclick=function(){
+           let a = document.querySelectorAll(".inp")[0].value;
+            document.querySelectorAll(".innerbox")[4].style.backgroundColor=a;
+
+        }
+        document.querySelectorAll(".innerbox")[5].onclick=function(){
+            let a = document.querySelectorAll(".inp")[0].value;
+            document.querySelectorAll(".innerbox")[5].style.backgroundColor=a;
+        }
+        document.querySelectorAll(".innerbox")[6].onclick=function(){
+            let a = document.querySelectorAll(".inp")[0].value;
+            document.querySelectorAll(".innerbox")[6].style.backgroundColor=a;
+        }
+                document.querySelectorAll(".innerbox")[7].onclick=function(){
+            let a = document.querySelectorAll(".inp")[0].value;
+            document.querySelectorAll(".innerbox")[7].style.backgroundColor=a;
+        }
+
 
         document.querySelector("#btn").onclick = function () {
 
