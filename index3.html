@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>*{
+        
+        font-size: 16px;
+            font-family: cursive;
+    }
+        .main {
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        input::placeholder{
+            padding-left: 20px;
+            color: blue;
+        }
+        input{
+            height: 30px;
+        }
+        .innerbox {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 8px 10px 5px  #bdb5b5ba;
+
+        }
+        button{
+            width: 100px;
+            height: 36px;
+            background-color: rgba(24, 190, 255, 0.877);
+            border: none;
+            border-radius: 5px;
+
+        }
+        .container{
+            width: 100%;
+            margin-left: 25%;
+        }
+        .text {
+    padding-left: 10px
+    }
+    </style>
+</head>
+
+<body>
+    <!-- <input type="text" id="inp" value="">
+    <button type="submit" id="btn"> submit</button> -->
+    <!-- 
+    <input type="text" class="inp" value="">
+    <input type="text" class="inp" value="">
+    <input type="text" class="inp" value="">-->
+
+    <div class="container">
+    <input type="text" class="inp" id="inp1" value="" placeholder="color name">
+    <input type="text" class="inp" id="inp2" value="" placeholder="pick a no for box">
+    <button type="submit" class="btn" id="btn"> submit</button>
+
+    <div class="main">
+        <div class="innerbox" id="box1"></div>
+        <div class="innerbox" id="box2"></div>
+        <div class="innerbox" id="box3"></div>
+        <div class="innerbox" id="box4"></div>
+        <div class="innerbox" id="box5"></div>
+        <div class="innerbox" id="box6"></div>
+        <div class="innerbox" id="box7"></div>
+        <div class="innerbox" id="box8"></div>
+    </div>
+
+</div>
+    <script>
+        // document.getElementById("btn").onclick=function(){
+        //     let a=document.getElementsByClassName("inp");
+
+        //     for (let i = 0; i < a.length; i++) {
+        //         console.log(a[i].value);
+
+        //     }
+        // }
+
+        // document.querySelector("#btn").onclick=function(){
+        //   let a=  document.querySelector(".inp");
+        //   console.log(a);
+        // }
+
+
+        // document.querySelector("#btn").onclick=function(){
+        //   let a=  document.querySelectorAll(".inp");
+        //   for (const i of a) {
+        //     console.log(i.value);
+        //   }
+        // }
+
+        document.querySelector("#btn").onclick = function () {
+
+
+            let a = document.querySelectorAll(".inp")[0].value;
+            let b = document.querySelectorAll(".inp")[1].value;
+
+            switch (b) {
+                case "1":
+                    document.querySelectorAll(".innerbox")[0].style.backgroundColor = a;
+                    break;
+                case "2":
+                    document.querySelectorAll(".innerbox")[1].style.backgroundColor = a;
+                    break;
+                case "3":
+                    document.querySelectorAll(".innerbox")[2].style.backgroundColor = a;
+                    break;
+                case "4":
+                    document.querySelectorAll(".innerbox")[3].style.backgroundColor = a;
+                    break;
+                case "5":
+                    document.querySelectorAll(".innerbox")[4].style.backgroundColor = a;
+                    break;
+                case "6":
+                    document.querySelectorAll(".innerbox")[5].style.backgroundColor = a;
+                    break;
+                case "7":
+                    document.querySelectorAll(".innerbox")[6].style.backgroundColor = a;
+                    break;
+                case "8":
+                    document.querySelectorAll(".innerbox")[7].style.backgroundColor = a;
+                    break;
+
+                default:
+                alert("NOT VALID RANGE ONLY 1 TO 8")
+                    break;
+            }
+
+            // for (let i of a) {
+            //     console.log(i.value);
+            // }
+
+            //  let x= document.querySelectorAll("innerbox");
+            //  let y= document.querySelectorAll("innerbox");
+            console.log(a, b);
+            //  console.log(y);
+        }
+
+
+    </script>
+</body>
+
+</html>
