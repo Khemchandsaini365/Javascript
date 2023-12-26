@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="inp" id="inp1" value="" placeholder="value 1" >
+    <input type="text" class="inp" id="inp2" value="" placeholder="value 2">
+
+    <select name="" id="main" class="container">
+        <option value="mul">MUL</option>
+        <option value="div">DIV</option>
+        <option value="add">ADD</option>
+        <option value="sub">SUB</option>
+    </select>
+
+    <a href="" class="links" id="l1" >phython</a>
+    <a href="" class="links" id="l2">JAVA</a>
+    <a href="" class="links" id="l3">C++</a>
+    <a href="" class="links" id="l4">HTML</a>
+
+    <script>
+        // document.getElementById("main").onclick=function(){
+        //     let a=Number(document.getElementById("inp1").value);
+        //     let b=Number(document.getElementById("inp2").value);
+
+        //     let c=document.getElementById("main").value;
+        //     console.log(a,b,c);
+        
+        //    if (c=="mul") {
+        //         console.log(a*b);
+        //     } else if(c=="add") {
+        //         console.log(a+b);
+        //     }else if(c=="sub"){
+        //             console.log(a-b);
+        //     }else if(c=="div"){
+        //         console.log(a/b);
+        //     }
+        // }
+
+        // document.getElementById("l1").onclick=function(e){
+        //     e.preventDefault();
+        //     console.log(document.getElementsByTagName("a").innerText);
+        // }
+
+       let a=document.querySelectorAll("a")
+       for (let i of a) {
+            i.onclick=function(e){
+                console.log(i.innerText);
+                e.preventDefault();
+            }
+            
+       }
+
+    </script>
+</body>
+</html>
