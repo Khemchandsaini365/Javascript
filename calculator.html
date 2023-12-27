@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Calculator</title>
+        <style>
+            body {
+                font-family: sans-serif;    
+            }
+
+            .calculator {
+                padding: 0 0%;
+                width: 25%;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                border: 2px solid black;
+                box-sizing: border-box;
+                border-radius: 10px;
+                overflow: hidden;
+                background-color: lightblue;
+            }
+
+            .calculator .display {
+                width: 100%;
+                height: 50px;
+                background-color: #e3e3e3;
+                text-align: right;
+                box-sizing: border-box;
+                padding: 10px;
+                font-size: 20px;
+                border: none;
+            }
+
+            .calculator .buttons {
+                width: 100%;
+                display: flex;;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .calculator .buttons .button {
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                text-align: center;
+                padding: 10px;
+                font-size: 20px;
+                cursor: pointer;
+                margin: 5px 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="calculator">
+           
+                <input type="text" class="display" id="display">
+           
+            <div class="buttons">
+                <button class="button">AC</button>
+                <button class="button">x</button>
+                <button class="button">+/-</button>
+                <button class="button">%</button>
+                <button class="button">7</button>
+                <button class="button">8</button>
+                <button class="button">9</button>
+                <button class="button">/</button>
+                <button class="button">4</button>
+                <button class="button">5</button>
+                <button class="button">6</button>
+                <button class="button">*</button>
+                <button class="button">1</button>
+                <button class="button">2</button>
+                <button class="button">3</button>
+                <button class="button">-</button>
+                <button class="button">0</button>
+                <button class="button">.</button>
+                <button class="button">+</button>
+                <button class="button">=</button> 
+            </div>
+        </div>
+
+
+        <script>
+        //    document.querySelectorAll(".button")[0].onclick=function(){
+        //     let a=document.querySelectorAll("button")[0].innerText
+        //     console.log(a);
+        //    document.querySelectorAll(".display")[0].innerHTML=a
+        //    }
+        let n=document.querySelectorAll(".button").length;
+        // console.log(n)
+        // let x;
+
+        for (let i = 0; i < n; i++) {
+            document.getElementsByClassName("button")[i].onclick=function(){
+                let x= document.getElementsByClassName("button")[i].innerText;
+                document.querySelectorAll(".display")[0].value +=x; 
+                let exp=document.getElementById("display").value;
+            
+                 x=  document.querySelectorAll(".display")[0].value=eval(exp);
+
+                
+            }
+         
+            
+        }
+
+
+        </script>
+    </body>
+
+    </html>
+</body>
+
+</html>
