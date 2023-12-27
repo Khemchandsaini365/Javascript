@@ -94,28 +94,55 @@
 
 
         <script>
+            let btn=document.querySelectorAll(".button");
+            for (let i of btn) {
+                
+                i.onclick=function(){
+                    
+                    if (i.innerText=="=") {
+                        let data=document.querySelector("input").value;
+                        document.querySelector("input").value=eval(data)
+                    }else if (i.innerText=="AC") {
+                        document.querySelector("input").value=" "
+                    }else if (i.innerText=="x") {
+                        document.querySelector("input").value=document.querySelector("input").value.slice(0,-1)
+                    }else{
+                        document.querySelector("input").value+=i.innerText;
+                        }
+
+                //   let  exp=document.getElementById("display").value;
+                //   console.log(exp);
+                    // if(i.innerText="="){
+                    //     data=document.getElementById("display").value;
+
+                    // }else{
+
+                    // }
+                }
+                
+            }
+
+
         //    document.querySelectorAll(".button")[0].onclick=function(){
         //     let a=document.querySelectorAll("button")[0].innerText
         //     console.log(a);
         //    document.querySelectorAll(".display")[0].innerHTML=a
         //    }
-        let n=document.querySelectorAll(".button").length;
         // console.log(n)
         // let x;
 
-        for (let i = 0; i < n; i++) {
-            document.getElementsByClassName("button")[i].onclick=function(){
-                let x= document.getElementsByClassName("button")[i].innerText;
-                document.querySelectorAll(".display")[0].value +=x; 
-                let exp=document.getElementById("display").value;
-            
-                 x=  document.querySelectorAll(".display")[0].value=eval(exp);
+        // for (let i = 0; i < n; i++) {
+        //     document.getElementsByClassName("button")[i].onclick=function(){
+        //         let x= document.getElementsByClassName("button")[i].innerText;
+        //         document.querySelectorAll(".display")[0].value +=x; 
+        //         let exp=document.getElementById("display").value;
+        //         x=document.querySelectorAll(".display")[0].value=eval(exp);
 
                 
-            }
+        //     }
          
             
-        }
+        
 
 
         </script>
