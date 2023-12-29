@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stop watch</title>
     <style>
-        .container{
+        .container {
             border: 2px solid black;
             display: flex;
             width: 50%;
             margin: auto;
         }
-        .innerbox{
+
+        .innerbox {
             flex: 1;
             background-color: brown;
             height: 100px;
@@ -21,15 +23,18 @@
             align-items: center;
             font-size: 50px;
         }
-        .first{
+
+        .first {
             flex: 1;
             background-color: aqua;
         }
-        .sec{
+
+        .sec {
             flex: 1;
             background-color: blue;
         }
-        .btns{
+
+        .btns {
             display: flex;
             width: 50%;
             margin: auto;
@@ -38,32 +43,65 @@
             justify-content: space-between;
             padding: 0 10%;
             box-sizing: border-box;
-           
+
         }
-        button{
+        button {
             font-size: 25px;
         }
-        
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="innerbox first">
-            <h1>00</h1>
+            <h1 id="hour">00</h1>
         </div>
         <div class="innerbox sec">
-<h1>00</h1>
+            <h1 id="min">00</h1>
         </div>
         <div class="innerbox third">
-<h1>00</h1>
+            <h1 id="sec">00</h1>
         </div>
     </div>
 
     <div class="btns">
-        <button>START</button>
-        <button>PAUSE</button>
-        <button>STOP</button>
-       
+        <button id="start">START</button>
+        <button id="pause">PAUSE</button>
+        <button id="stop">STOP</button>
+
     </div>
+
+    <script>
+        document.getElementById("start").onclick=function(){
+            let s=document.getElementById("sec").innerText;
+            let m=document.getElementById("min").innerText;
+            let h=document.getElementById("hour").innerText;
+            // s=58;
+            // m=58;
+
+          
+                setInterval(function(){
+                    s++;
+                    document.getElementById("sec").innerText=s;
+                    if(s=="60"){
+                        s=0;
+                        document.getElementById("sec").innerText=s;
+                        m++;
+                        if (m<="60") {
+                            document.getElementById("min").innerText=m;
+                            if (m=="60") {
+                                m=0;
+                                h++;
+                                document.getElementById("hour").innerText=h;
+                            }
+
+                        }
+                    }
+                    
+                },100)
+
+        }
+    </script>
 </body>
+
 </html>
