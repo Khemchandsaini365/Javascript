@@ -133,6 +133,7 @@
         /*   code for stop button  */
         let a=document.querySelectorAll("h1");
         document.getElementById("stop").onclick=function(){
+            paused=true;
            for (const i of a) {
             i.innerText="00";
            }
