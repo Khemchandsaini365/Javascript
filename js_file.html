@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" class="inp" id="inp1" value="" placeholder="value 1" >
+    <!-- <input type="text" class="inp" id="inp1" value="" placeholder="value 1" >
     <input type="text" class="inp" id="inp2" value="" placeholder="value 2">
 
     <select name="" id="main" class="container">
@@ -19,8 +19,12 @@
     <a href="" class="links" id="l1" >phython</a>
     <a href="" class="links" id="l2">JAVA</a>
     <a href="" class="links" id="l3">C++</a>
-    <a href="" class="links" id="l4">HTML</a>
-
+    <a href="" class="links" id="l4">HTML</a> -->
+    <!-- <h1>Khem</h1>
+    <input type="range" name="" id="slider" min="0" max="100"> -->
+<div class="main" style="display: flex;">
+    <h1 id="hour">00:</h1><h1 id="min">00:</h1><h1 id="sec">00:</h1><h1 id="msec">00</h1>
+</div>
     <script>
         // document.getElementById("main").onclick=function(){
         //     let a=Number(document.getElementById("inp1").value);
@@ -45,15 +49,33 @@
         //     console.log(document.getElementsByTagName("a").innerText);
         // }
 
-       let a=document.querySelectorAll("a")
-       for (let i of a) {
-            i.onclick=function(e){
-                console.log(i.innerText);
-                e.preventDefault();
-            }
+    //    let a=document.querySelectorAll("a")
+    //    for (let i of a) {
+    //         i.onclick=function(e){
+    //             console.log(i.innerText);
+    //             e.preventDefault();
+    //         }
             
-       }
+    //    }
+// ;
+//         document.getElementById("slider").oninput=function(){
+//             let a=document.getElementById("slider").value
+//             document.querySelector("h1").style.fontSize=a+"px";
+//             console.log(a);
+//         }
 
+document.getElementById("msec").onclick=function(){
+    let a=document.getElementById("msec").innerText;
+    let b=document.getElementById("msec");
+    setInterval(function(){
+        document.getElementById("msec").innerText
+        // document.getElementById("msec").innerText++;
+        
+    },100)
+
+}
+        
+        
     </script>
 </body>
 </html>
