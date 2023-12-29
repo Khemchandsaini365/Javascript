@@ -22,6 +22,7 @@
             justify-content: center;
             align-items: center;
             font-size: 50px;
+            border-radius: 10px;
         }
 
         .first {
@@ -47,6 +48,19 @@
         }
         button {
             font-size: 25px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        #start{
+            background-color: green;
+        }
+        #stop{
+            background-color: red;
+        }
+        #pause{
+            background-color: rgb(255, 179, 0);
         }
     </style>
 </head>
@@ -78,29 +92,51 @@
             let h=document.getElementById("hour").innerText;
             // s=58;
             // m=58;
-
-          
+            var paused = false;
                 setInterval(function(){
-                    s++;
+                    if (!paused) {
+                        s++;
                     document.getElementById("sec").innerText=s;
                     if(s=="60"){
                         s=0;
                         document.getElementById("sec").innerText=s;
                         m++;
                         if (m<="60") {
-                            document.getElementById("min").innerText=m;
                             if (m=="60") {
                                 m=0;
                                 h++;
                                 document.getElementById("hour").innerText=h;
+                            }else{
+                            document.getElementById("min").innerText=m;
                             }
 
                         }
+                    } 
                     }
+                   
                     
-                },100)
+                },1000)
+
+                document.getElementById("pause").onclick=function(){
+                paused=true;
+            let a=document.getElementById("sec").innerHTML;
+            let b=document.getElementById("min").innerText;
+            let c=document.getElementById("hour").innerText;
+            document.getElementById("sec").innerText=a;
+            document.getElementById("min").innerText=b;
+            document.getElementById("hour").innerText=c
+        }
+        /*   code for stop button  */
+        let a=document.querySelectorAll("h1");
+        document.getElementById("stop").onclick=function(){
+           for (const i of a) {
+            i.innerText="00";
+           }
+        }
 
         }
+
+        
     </script>
 </body>
 
