@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+
+       height: 100vh;
+    }
+    </style>
+</head>
+<body id="body">
+
+    <script>
+        // three types of function
+    //     1.named function
+    //     2.anonyms function
+    //     3. arrow function
+            function a(){
+                return Math.floor(Math.random()*255);
+            }
+        function b(){
+            return Math.floor(Math.random()*255);
+        }
+        function c(){
+            return Math.floor(Math.random()*255);
+        }
+
+        // function (a(),b(),c()){};
+        function setcolor(){
+            
+        }
+        
+        // document.getElementById("body").onmouseover = function(){
+        //     document.getElementById("body").style.backgroundColor="rgb("+a()+","+b()+","+c();
+        // }
+        
+        document.getElementById("body").onmouseover = function(){
+            document.getElementById("body").style.backgroundColor="rgb("+a()+","+b()+","+c();
+        }
+        
+     </script>
+</body>
+</html>
