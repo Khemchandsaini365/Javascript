@@ -18,29 +18,51 @@
     //     1.named function
     //     2.anonyms function
     //     3. arrow function
-            function a(){
-                return Math.floor(Math.random()*255);
-            }
-        function b(){
-            return Math.floor(Math.random()*255);
-        }
-        function c(){
-            return Math.floor(Math.random()*255);
-        }
+        //     function a(){
+        //         return Math.floor(Math.random()*255);
+        //     }
+        // function b(){
+        //     return Math.floor(Math.random()*255);
+        // }
+        // function c(){
+        //     return Math.floor(Math.random()*255);
+        // }
 
-        // function (a(),b(),c()){};
-        function setcolor(){
+        // // function (a(),b(),c()){};
+        // function setcolor(){
             
-        }
+        // }
         
         // document.getElementById("body").onmouseover = function(){
         //     document.getElementById("body").style.backgroundColor="rgb("+a()+","+b()+","+c();
         // }
         
-        document.getElementById("body").onmouseover = function(){
-            document.getElementById("body").style.backgroundColor="rgb("+a()+","+b()+","+c();
-        }
+        // document.getElementById("body").onmouseover = function(){
+        //     document.getElementById("body").style.backgroundColor="rgb("+a()+","+b()+","+c();
+        // }
         
+    // arrow functon     
+//   (  ()=>{
+//         console.log("hello");
+//     })();
+
+let nums=( i=1)=>{
+    console.log(i++);
+}
+for (let i = 0; i < 10; i++) {
+   nums(i);
+    
+}
+
+    //anonymus
+    let evnens=function(){
+        console.log("annoymus");
+    }
+
+    evnens();
+    evnens();
+    
+
      </script>
 </body>
 </html>
