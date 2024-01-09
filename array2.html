@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="txt">
+    
+    <button id="btn">add</button>
+    <button id="btn">print</button>
+    <h1 id="h11"></h1>
+    <script>
+        let a=[];
+        document.querySelectorAll("button")[0].onclick=function(){
+            let val=document.querySelector("#txt").value;
+            // console.log(val);
+            a.push(val);
+            
+        }
+    
+        document.querySelectorAll("button")[1].onclick=function(){
+            
+    let i=0;    
+    let n=a.length;
+            // console.log(n);
+                setInterval(function(){
+                    if(i==n){
+                        // console.log(a[i]);
+                        clearInterval();
+                    }else{
+                        document.querySelector("#h11").innerText+=(a[i]);
+                        i++;
+                    }
+                },1000)
+
+}
+    </script>
+</body>
+</html>
