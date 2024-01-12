@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1evn" ></h1>
+    <h1 id="h1odd"></h1>
+    <input type="text">
+    <button id="btn">submit</button>
+    <button id="epop">evn pop</button>
+    <button id="odpop">odd pop</button>
+    <button id="sift">shift </button>
+    <button id="unsift">un  shift </button>
+    <button id="print">print</button>
+
+    <script>
+
+        // console.log(a);
+        let evn=[];
+        let even=[10,20,30,40,50];
+        let odd=[];
+        let bnt=document.querySelector("#btn")
+        bnt.addEventListener("click",function(){
+        var a=Number(document.querySelector("input").value);
+
+            console.log(a);
+            if(a%2==0){
+            evn.push(a)
+            
+        console.log(evn);
+        }else{
+            odd.push(a);
+        console.log(odd);
+
+        }
+        
+        })
+
+        document.querySelector("#epop").addEventListener("click",function(){
+            evn.pop();
+            console.log(evn);
+        })
+        document.querySelector("#odpop").addEventListener("click",function(){
+            odd.pop();
+            console.log(odd);
+            
+        })
+
+        
+        document.querySelector("#print").addEventListener("click",function(){
+            document.querySelector("#h1evn").innerText=evn;
+            document.querySelector("#h1odd").innerText=odd;
+        })
+
+            let sift=document.querySelector("#sift");
+            sift.addEventListener("click",function(){
+             let a=even.shift();
+             even.push(a)
+                console.log(even);
+                even.join(" ");
+
+                document.querySelector("#h1evn").innerText=even.join(" ");;
+
+            })
+            let unsft=document.querySelector("#unsift")
+            unsft.addEventListener("click",function(){
+                let a=even.pop();
+                even.unshift(a);
+                console.log(even);
+
+                document.querySelector("#h1evn").innerText=even.join(" ");
+                ;
+            })
+
+
+    </script>
+</body>
+</html>
