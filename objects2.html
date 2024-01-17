@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const complexData = [
+            {
+                id: 1,
+                name: "John Doe",
+                age: 30,
+                address: {
+                    street: "123 Main St",
+                    city: "Anytown",
+                    country: "USA", 
+                },
+                orders: [
+                    { orderId: "A123", amount: 50.75, status: "completed" },
+                    { orderId: "B456", amount: 30.25, status: "pending" },
+                ],
+            },
+            {
+                id: 2,
+                name: "Jane Smith",
+                age: 25,
+                address: {
+                    street: "456 Oak St",
+                    city: "Othercity",
+                    country: "USA",
+                },
+                orders: [
+                    { orderId: "C789", amount: 100.5, status: "completed" },
+                    { orderId: "D012", amount: 75.2, status: "completed" },
+                ],
+            },
+        ];
+        // console.log(complexData);
+        // let a = complexData.filter((k) => {
+        //     return k.age<=25
+        // })
+
+        // console.log(a);
+
+        //  let b=   complexData.map((k)=>{return k.name})
+        //  console.log(b);
+
+     let x= complexData.map((k)=>{
+          return  k.orders
+        })
+      let z=x.map((i)=> i.map((e)=> e.amount))
+    //   z.flat()
+      console.log(z);
+    // console.log(z);
+    // let r=  z.flat((h)=> h>50)
+    // console.log(r);
+    </script>
+</body>
+
+</html>
